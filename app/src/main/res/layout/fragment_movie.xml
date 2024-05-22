@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <TextView
+        android:id="@+id/popularTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Trending"
+        android:textSize="@dimen/_20ssp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/white"
+        android:layout_margin="@dimen/_5sdp"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPopular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/popularTxt"
+        android:layout_margin="@dimen/_5sdp"
+        tools:listitem="@layout/adapter_list"
+        tools:itemCount="5"
+        android:nestedScrollingEnabled="false"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

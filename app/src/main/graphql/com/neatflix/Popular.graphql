@@ -1,0 +1,8 @@
+query PopularMovies {
+    popularMovies {
+        id
+        overview
+        release_date
+        title
+    }
+}

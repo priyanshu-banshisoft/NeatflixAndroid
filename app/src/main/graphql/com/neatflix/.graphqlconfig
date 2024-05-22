@@ -1,0 +1,16 @@
+{
+  "name": "Untitled GraphQL Schema",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "https://tmdbgraphql-21xuo56l.b4a.run/graphql",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "API_KEY": "7265bf8d24516ee6c0e1a79b05805c13"
+        },
+        "introspect": false
+      }
+    }
+  }
+}
