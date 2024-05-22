@@ -2,9 +2,6 @@
 
 An android app built using [Android Basic](https://developer.android.com/codelabs/build-your-first-android-app) that consumes [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction) and [Apollo GraphQL](https://www.apollographql.com/docs/kotlin) to display the current trending, upcoming, top rated, and popular movies and tv-shows. It also suggests films based on your watch list.
 
-<p align="center"> <img src="media/header.png" width="750"> </p>
-
-[<img src="media/download.png" width="380px"/>](https://docs.google.com/uc?export=download&id=1ilcELnAY4XqCoDOFJdAqy7_FVO1NIm8h)
 
 ---
 # Setup Requirements
@@ -35,5 +32,8 @@ Finally, rebuild the project for changes to take effect and don't forget to upda
 
 
 ---
+
+For TMDB GraphQL :- [Github](https://github.com/priyanshu-banshisoft/tmdb_graphql) 
+
 Happy coding!
 
