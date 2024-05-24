@@ -1,7 +1,12 @@
 package com.neatflix.app;
 
+import com.neatflix.GenresMovieQuery;
+
+import java.util.List;
+
 public class AppDelegate {
     public static AppDelegate ad;
+    public List<GenresMovieQuery.Genre> genreList;
 
     public static AppDelegate getInstance() {
         if (ad == null) {
@@ -21,5 +26,13 @@ public class AppDelegate {
 
     public static void setAd(AppDelegate ad) {
         AppDelegate.ad = ad;
+    }
+
+    public  List<GenresMovieQuery.Genre> getGenreList() {
+        return genreList;
+    }
+
+    public  void setGenreList(List<GenresMovieQuery.Genre> genreList) {
+        this.genreList = genreList;
     }
 }

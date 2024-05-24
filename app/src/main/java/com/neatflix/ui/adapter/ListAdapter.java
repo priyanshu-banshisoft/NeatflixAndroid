@@ -1,12 +1,13 @@
 package com.neatflix.ui.adapter;
 
 import android.content.Context;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -48,16 +49,6 @@ public class ListAdapter extends BaseRecyclerAdapter {
     }
 
     @Override
-    public int getItemViewType(int position) {
-        return position;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
     public int getItemCount() {
         return list.size();
     }
@@ -73,8 +64,11 @@ public class ListAdapter extends BaseRecyclerAdapter {
         public void setDataBind(TrendingMoviesQuery.TrendingMovie trendingMovie) {
             Glide.with(context).load(Constants.BASE_POSTER_IMAGE_URL+trendingMovie.getBackdrop_path()).into(binding.imageIv);
             binding.nameTv.setText(trendingMovie.getTitle());
-//            Log.e("Poster Img",trendingMovie.getBackdrop_path());
-//            Log.e("Poster Title",trendingMovie.getTitle());
+            binding.getRoot().setOnClickListener(v -> {
+                Bundle bundle = new Bundle();
+                bundle.putInt("id",trendingMovie.getId());
+                Navigation.findNavController(v).navigate(R.id.showDetailsFragment,bundle);
+            });
         }
     }
 }

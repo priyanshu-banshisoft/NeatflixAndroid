@@ -10,4 +10,9 @@
         android:name="com.neatflix.ui.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/showDetailsFragment"
+        android:name="com.neatflix.ui.fragment.ShowDetailsFragment"
+        android:label="ShowDetailsFragment"
+        tools:layout="@layout/fragment_show_details"/>
 </navigation>

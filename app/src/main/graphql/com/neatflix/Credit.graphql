@@ -1,0 +1,10 @@
+query Credit($id: Int!) {
+    credit(id: $id) {
+        id
+        cast {
+            id
+            name
+            profile_path
+        }
+    }
+}
